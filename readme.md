@@ -4,4 +4,4 @@
 yarn create react-app react-spring-mouse-parallax --typescript
 ```
 
-![react-spring.png](react-spring.png)
+![react-spring.gif](react-spring.gif)

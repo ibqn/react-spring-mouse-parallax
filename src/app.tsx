@@ -1,6 +1,6 @@
 import { FunctionComponent, MouseEvent } from 'react'
 
-import { useSpring, animated, interpolate } from 'react-spring'
+import { useSpring, animated, to } from 'react-spring'
 import './app.scss'
 
 const calc = (x: number, y: number) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
@@ -19,10 +19,10 @@ const App: FunctionComponent = () => {
     <div
       className="container"
       onMouseMove={({ clientX: x, clientY: y }: MouseEvent) => set({ xy: calc(x, y) })}>
-      <animated.div className="card1" style={{ transform: interpolate(props.xy, trans1) }} />
-      <animated.div className="card2" style={{ transform: interpolate(props.xy, trans2) }} />
-      <animated.div className="card3" style={{ transform: interpolate(props.xy, trans3) }} />
-      <animated.div className="card4" style={{ transform: interpolate(props.xy, trans4) }} />
+      <animated.div className="card1" style={{ transform: to(props.xy, trans1) }} />
+      <animated.div className="card2" style={{ transform: to(props.xy, trans2) }} />
+      <animated.div className="card3" style={{ transform: to(props.xy, trans3) }} />
+      <animated.div className="card4" style={{ transform: to(props.xy, trans4) }} />
     </div>
   )
 }

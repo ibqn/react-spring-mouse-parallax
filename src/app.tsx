@@ -1,7 +1,7 @@
-import React, { FunctionComponent, MouseEvent } from 'react';
+import { FunctionComponent, MouseEvent } from 'react';
 
 import { useSpring, animated, interpolate } from 'react-spring';
-import './App.scss';
+import './app.scss';
 
 const calc = (x: number, y: number) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
 const trans1 = (x: number, y: number) => `translate3d(${x / 10}px,${y / 10}px,0)`;
